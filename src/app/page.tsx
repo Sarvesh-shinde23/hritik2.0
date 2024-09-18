@@ -19,7 +19,7 @@ const page = () => {
     <HeroSection/>
 <MyComponent/>
     <Aboutus/>
-  <TeamSection/>
+
     <WhyChooseUsSection/>
   <Testimonial/>
   <ServiceSection/>
