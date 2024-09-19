@@ -42,12 +42,12 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-md p-4">
           <ul className="flex flex-col space-y-4">
-            <li><Link href="/services" className="text-gray-700 hover:text-blue-600">Service</Link></li>
-            <li><Link href="/about" className="text-gray-700 hover:text-blue-600">About Us</Link></li>
-            <li><Link href="/team" className="text-gray-700 hover:text-blue-600">Team</Link></li>
-            <li><Link href="/testimonials" className="text-gray-700 hover:text-blue-600">Testimonials</Link></li>
-            <li><Link href="/blog" className="text-gray-700 hover:text-blue-600">Blog</Link></li>
-            <li><Link href="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link></li>
+            <li><Link href="#services" className="text-gray-700 hover:text-blue-600">Service</Link></li>
+            <li><Link href="#about" className="text-gray-700 hover:text-blue-600">About Us</Link></li>
+            <li><Link href="#team" className="text-gray-700 hover:text-blue-600">Team</Link></li>
+            <li><Link href="#testimonials" className="text-gray-700 hover:text-blue-600">Testimonials</Link></li>
+            <li><Link href="#blog" className="text-gray-700 hover:text-blue-600">Blog</Link></li>
+            <li><Link href="#contact" className="text-gray-700 hover:text-blue-600">Contact</Link></li>
           </ul>
         </div>
       )}

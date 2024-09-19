@@ -6,19 +6,19 @@ const testimonials = [
     quote: "Transcend Business Consultancy transformed our business. Their expert guidance and strategic insights were instrumental in securing our first round of funding. We couldn't have done it without them.",
     name: "Rohit Verma",
     role: "CEO of Startup India Solutions",
-    image: "",
+    image: "/testimonials.svg",
   },
   {
     quote: "Thanks to Transcend, we were able to streamline our operations and scale our business rapidly. Their team is knowledgeable, professional, and always ready to help.",
     name: "Priya Menon",
     role: "Founder of Tech Innovators Pvt Ltd",
-    image: "",
+    image: "/testimonials.svg",
   },
   {
     quote: "The comprehensive support provided by Transcend Business Consultancy was crucial to our success. From company registration to growth strategy, they were with us every step of the way.",
     name: "Akash Patel",
     role: "Co-Founder of Green Ventures",
-    image: "",
+    image: "/testimonials.svg",
   },
 ];
 

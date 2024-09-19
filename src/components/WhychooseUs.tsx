@@ -32,7 +32,7 @@ const WhychooseUs = () => {
             matter experts, bringing decades of startup consultancy expertise.
             We use proven methodologies like Lean Startup, Agile Development,
             and SWOT Analysis to deliver customized, effective solutions that
-            meet the unique needs of each client, driving growth and success
+            meet the unique needs of each client, driving growth and success.
           </p>
           <p>
             With a global perspective and an extensive network, we help startups
@@ -45,24 +45,24 @@ const WhychooseUs = () => {
           {/* Icons and text sections */}
           <div className="flex flex-wrap items-center gap-5 mt-3">
             <span className="flex gap-4 items-center w-52">
-              {/* Camera icon */}
-              <AiFillCamera className="shadow-xl text-5xl text-[#3369e7] rounded-full p-3" />{" "}
-              Photograpy
+              <Image src="/whychooseus/agreement.svg" width={50} height={50} alt="Agreement icon" />
+          
+             Tailored Solutions
             </span>
             <span className="flex gap-3 items-center w-52">
-              {/* File search icon */}
-              <AiOutlineFileSearch className="shadow-xl text-5xl text-[#3369e7] rounded-full p-3" />{" "}
-              Find it here
+            <Image src="/whychooseus/experience.svg" width={50} height={50} alt="Agreement icon" />
+            
+              Experience Advisor
             </span>
             <span className="flex gap-3 items-center w-52">
-              {/* Home icon */}
-              <AiTwotoneHome className="shadow-xl text-5xl text-[#3369e7] rounded-full p-3" />{" "}
-              Inspire Photography
+            <Image src="/whychooseus/support.svg" width={50} height={50} alt="Agreement icon" />
+             
+              Comprehensive Support
             </span>
             <span className="flex gap-3 items-center w-52">
-              {/* Plane departure icon */}
-              <FaPlaneDeparture className="shadow-xl text-5xl text-[#3369e7] rounded-full p-3" />{" "}
-              Fly Your Dreams
+            <Image src="/whychooseus/provenwinning.svg" width={50} height={50} alt="Agreement icon" />
+          
+           Proven a Winning
             </span>
           </div>
         </div>
@@ -70,7 +70,7 @@ const WhychooseUs = () => {
         {/* Right-side content with an image */}
         <div data-aos="fade-left">
           {/* Image component */}
-          <Image src="/whychooseus/feature.png" width={648} height={400} alt={""} />
+          <Image src="/whychooseus/feature.png" width={648} height={400} alt="Feature image" />
         </div>
       </section>
     </>

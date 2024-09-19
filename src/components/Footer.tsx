@@ -85,14 +85,14 @@ const Footer: React.FC = () => {
           {/* Follow Us */}
           <div className="flex flex-col grow shrink justify-center pt-6 max-w-[1320px] min-w-[240px] w-[396px] max-md:max-w-full">
             <div className="flex flex-col px-3 pb-14 w-full max-w-[1320px] max-md:max-w-full">
-              <h3 className="pb-3 text-base font-bold leading-tight text-neutral-800">Follow us</h3>
+              <h3 className="pb-8 text-base font-bold leading-tight text-neutral-800">Follow us</h3>
               <p className="mt-2 text-sm text-neutral-700 leading-5">
                 Stay updated with our latest news and offers through our social channels.
               </p>
               <div className="flex items-center mt-4 space-x-4"> {/* Align items horizontally */}
                 {socialMediaImages.map((imageSrc, index) => (
                   <div className="min-h-[40px] w-[50px]" key={index}>
-                    <div className="flex justify-center items-center px-2 py-2 rounded border border-solid border-neutral-700 border-opacity-50">
+                    <div className="flex justify-center items-center px-2 py-4 rounded border border-solid border-neutral-700 border-opacity-50">
                       <Image
                         loading="lazy"
                         src={imageSrc}
