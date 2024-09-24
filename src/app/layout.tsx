@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import TopBar from "@/components/TopBar";
+import Whatsapp from "@/components/whatsapp";
 
 
 // Import Montserrat font
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Navbar />
         <div className="min-h-dvh">{children}</div>
         <div className="w-full">
+          <Whatsapp/>
           <Footer />
         </div>
       </body>

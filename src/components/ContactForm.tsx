@@ -57,7 +57,7 @@ const ContactForm: React.FC = () => {
             </button>
 
             <div id="dropdownStage" className={`absolute top-full left-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-full ${dropdownOpen === 'dropdownStage' ? 'block' : 'hidden'}`}>
-              <ul className="py-14 text-sm text-gray-700">
+              <ul className="py-12 text-sm text-gray-700">
                 <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Idea Stage</a></li>
                 <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Early Stage</a></li>
                 <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Growth Stage</a></li>

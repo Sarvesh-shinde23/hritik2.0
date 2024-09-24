@@ -28,9 +28,9 @@ const Navbar: React.FC = () => {
         <div className="hidden md:flex space-x-6">
           <Link href="#services" className="text-gray-700 hover:text-blue-600">Service</Link>
           <Link href="#about" className="text-gray-700 hover:text-blue-600">About Us</Link>
-          <Link href="#team" className="text-gray-700 hover:text-blue-600">Team</Link>
+  
           <Link href="#testimonials" className="text-gray-700 hover:text-blue-600">Testimonials</Link>
-          <Link href="#blog" className="text-gray-700 hover:text-blue-600">Blog</Link>
+        
           <Link href="#contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
         </div>
         <div className="md:hidden flex items-center">
@@ -44,9 +44,9 @@ const Navbar: React.FC = () => {
           <ul className="flex flex-col space-y-4">
             <li><Link href="#services" className="text-gray-700 hover:text-blue-600">Service</Link></li>
             <li><Link href="#about" className="text-gray-700 hover:text-blue-600">About Us</Link></li>
-            <li><Link href="#team" className="text-gray-700 hover:text-blue-600">Team</Link></li>
+         
             <li><Link href="#testimonials" className="text-gray-700 hover:text-blue-600">Testimonials</Link></li>
-            <li><Link href="#blog" className="text-gray-700 hover:text-blue-600">Blog</Link></li>
+           
             <li><Link href="#contact" className="text-gray-700 hover:text-blue-600">Contact</Link></li>
           </ul>
         </div>
