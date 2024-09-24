@@ -1,23 +1,41 @@
 'use client'
 import React, { useState } from "react";
 
-
 const ContactForm: React.FC = () => {
-  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
-
-  const toggleDropdown = (id: string) => {
-    setDropdownOpen(dropdownOpen === id ? null : id);
-  };
+  function Submit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault(); // Prevent page refresh
+    const formEle = document.querySelector("form");
+    const formDatab = new FormData(formEle as HTMLFormElement);
+    
+    fetch(
+      "https://script.google.com/macros/s/AKfycbxMJXfYBIWNrf9oL2XWFWYMl5aZWU2UOpssESJHWEmPMyFEvBiD-u3U7XWXdTIUtWZ3/exec",
+      {
+        method: "POST",
+        body: formDatab
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 
   return (
     <div id="contact" className="flex flex-col justify-center px-4 pt-6 text-base max-w-[1320px] mx-auto min-h-[623px] text-neutral-700">
-      <form className="flex flex-col px-5 pt-1.5 pb-10 w-full bg-white shadow-lg rounded-lg mx-auto max-w-[600px]">
+      <form 
+        className="flex flex-col px-5 pt-1.5 pb-10 w-full bg-white shadow-lg rounded-lg mx-auto max-w-[600px]"
+        onSubmit={Submit} // Added onSubmit handler
+      >
         <div className="flex flex-col space-y-6">
           <div className="flex flex-col space-y-4">
             <div className="flex flex-col">
               <label htmlFor="name" className="text-sm font-semibold">Your Name</label>
               <input
                 id="name"
+                name="name" // Added name attribute
                 type="text"
                 className="mt-2 bg-white border border-neutral-300 rounded-md p-2 h-[42px]"
                 aria-label="Your Name"
@@ -27,6 +45,7 @@ const ContactForm: React.FC = () => {
               <label htmlFor="email" className="text-sm font-semibold">Your Email</label>
               <input
                 id="email"
+                name="email" // Added name attribute
                 type="email"
                 className="mt-2 bg-white border border-neutral-300 rounded-md p-2 h-[42px]"
                 aria-label="Your Email"
@@ -36,6 +55,7 @@ const ContactForm: React.FC = () => {
               <label htmlFor="phone" className="text-sm font-semibold">Phone No.</label>
               <input
                 id="phone"
+                name="phone" // Added name attribute
                 type="text"
                 className="mt-2 bg-white border border-neutral-300 rounded-md p-2 h-[42px]"
                 aria-label="Phone No."
@@ -43,53 +63,43 @@ const ContactForm: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <button 
-              type="button"
-              className="text-white bg-blue-700 hover:bg-blue-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
-              onClick={() => toggleDropdown('dropdownStage')}
-              aria-expanded={dropdownOpen === 'dropdownStage'}
+          {/* Dropdown for Startup Stage */}
+          <div className="flex flex-col">
+            <label htmlFor="stage" className="block mb-2 text-sm font-medium text-gray-900">
+              What is the current stage of your startup?
+            </label>
+            <select
+              id="stage"
+              name="stage" // Added name attribute
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
             >
-             What is the current stage of your startup?
-              <svg className="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-              </svg>
-            </button>
-
-            <div id="dropdownStage" className={`absolute top-full left-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-full ${dropdownOpen === 'dropdownStage' ? 'block' : 'hidden'}`}>
-              <ul className="py-12 text-sm text-gray-700">
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Idea Stage</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Early Stage</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Growth Stage</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Established</a></li>
-              </ul>
-            </div>
+              <option value="" selected disabled>Choose your stage</option>
+              <option value="Idea Stage">Idea Stage</option>
+              <option value="Early Stage">Early Stage</option>
+              <option value="Growth Stage">Growth Stage</option>
+              <option value="Established">Established</option>
+            </select>
           </div>
-          
-          <div className="relative">
-            <button 
-              type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center w-full"
-              onClick={() => toggleDropdown('dropdownGoal')}
-              aria-expanded={dropdownOpen === 'dropdownGoal'}
+
+          {/* Dropdown for Consultancy Goal */}
+          <div className="flex flex-col">
+            <label htmlFor="goal" className="block mb-2 text-sm font-medium text-gray-900">
+              What is your primary goal for seeking consultancy services?
+            </label>
+            <select
+              id="goal"
+              name="goal" // Added name attribute
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
             >
-           What is your primary goal for seeking consultancy services?
-              <svg className="w-4 h-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-              </svg>
-            </button>
-          
-            <div id="dropdownGoal" className={`absolute top-full left-0 mt-2 bg-white divide-y divide-gray-100 rounded-lg shadow w-full ${dropdownOpen === 'dropdownGoal' ? 'block' : 'hidden'}`}>
-              <ul className="py-2 text-sm text-gray-700">
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Legal and Compliance</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Business Strategy</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Funding</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Marketing and Sales</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Operational Efficiency</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Digital Presence</a></li>
-                <li><a href="#" className="block px-4 py-2 hover:bg-gray-100">Financial Management</a></li>
-              </ul>
-            </div>
+              <option value="" selected disabled>Choose your services</option>
+              <option value="Legal and Compliance">Legal and Compliance</option>
+              <option value="Business Strategy">Business Strategy</option>
+              <option value="Funding">Funding</option>
+              <option value="Marketing and Sales">Marketing and Sales</option>
+              <option value="Operational Efficiency">Operational Efficiency</option>
+              <option value="Digital Presence">Digital Presence</option>
+              <option value="Financial Management">Financial Management</option>
+            </select>
           </div>
 
           <button
