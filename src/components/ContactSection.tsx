@@ -19,17 +19,17 @@ const ContactSection: React.FC = () => {
                 {
                   iconSrc: "/map.svg",
                   title: "Address",
-                  description: "123 Business Rd, City, Country"
+                  description: "12, Palm crest, Main Avenue road, Santacruz w, Mumbai- 400050"
                 },
                 {
                   iconSrc: "/call.svg",
                   title: "Call Us",
-                  description: "+123 456 7890"
+                  description: "+91 98921 02328"
                 },
                 {
                   iconSrc: "email.svg",
                   title: "Email Us",
-                  description: "info@transcendconsulting.com"
+                  description: "hhinduja@gmail.com"
                 }
               ].map((item, index) => (
                 <div key={index} className="flex items-start mb-10">
@@ -51,7 +51,7 @@ const ContactSection: React.FC = () => {
               ))}
               <div className="mt-10">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345011613!2d144.95373631531696!3d-37.8162179797518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5772b07e6468934!2s123%20Business%20Rd%2C%20City%2C%20Country!5e0!3m2!1sen!2sin!4v1594298918257!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.69859299959!2d72.8341497746652!3d19.076985151942765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c908df7e69c3%3A0xad5b7b0bcc5d3baa!2sPalm%20Crest!5e0!3m2!1sen!2sin!4v1727372380348!5m2!1sen!2sin"
                   width="100%"
                   height="450"
                   frameBorder="0"

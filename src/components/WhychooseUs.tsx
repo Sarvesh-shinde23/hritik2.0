@@ -62,7 +62,7 @@ const WhychooseUs = () => {
             <span className="flex gap-3 items-center w-52">
             <Image src="/whychooseus/provenwinning.svg" width={50} height={50} alt="Agreement icon" />
           
-           Proven a Winning
+            Proven Winning strategies
             </span>
           </div>
         </div>

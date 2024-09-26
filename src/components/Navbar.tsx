@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
         <div className="hidden md:flex space-x-6">
-          <Link href="#services" className="text-gray-700 hover:text-blue-600">Service</Link>
+          <Link href="#services" className="text-gray-700 hover:text-blue-600">Services</Link>
           <Link href="#about" className="text-gray-700 hover:text-blue-600">About Us</Link>
   
           <Link href="#testimonials" className="text-gray-700 hover:text-blue-600">Testimonials</Link>
