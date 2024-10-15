@@ -3,11 +3,11 @@ import Image from 'next/image'; // Import Image from Next.js
 
 const Footer: React.FC = () => {
   const commonImageSrc = "/cross.svg";
-  const socialMediaImages = [
-"/instagram.png",
-"/Linkedin.png",
-"/facebook.png",
-"/twitter.png"
+  const socialMediaLinks = [
+    { src: "/instagram.png", url: "https://www.instagram.com/transcendbc/profilecard/?igsh=MWdiYXAzd201dDk5YQ==" },
+    { src: "/Linkedin.png", url: "https://www.linkedin.com" },
+    { src: "/facebook.png", url: "https://www.facebook.com" },
+    { src: "/twitter.png", url: "https://www.twitter.com" }
   ];
 
   return (
@@ -22,13 +22,13 @@ const Footer: React.FC = () => {
                 Contact Us
               </h2>
               <div className="flex flex-col pt-4 w-full text-sm text-neutral-700">
-                <p>A108 Adam Street</p>
-                <p className="mt-1.5">New York, NY 535022</p>
+                <p>12, Palm crest, Main Avenue road, </p>
+                <p className="mt-1.5">Santacruz w, Mumbai- 400050</p>
                 <p className="pt-3 mt-1.5 font-bold">
-                  Phone: <a href="tel:+155895548855" className="text-blue-600">+1 5589 55488 55</a>
+                  Phone: <a href="tel:+155895548855" className="text-blue-600">+91 98921 02328</a>
                 </p>
                 <p className="mt-1.5 font-bold">
-                  Email: <a href="mailto:info@example.com" className="text-blue-600">info@example.com</a>
+                  Email: <a href="mailto:info@example.com" className="text-blue-600">hhinduja@gmail.com</a>
                 </p>
               </div>
             </div>
@@ -90,18 +90,20 @@ const Footer: React.FC = () => {
                 Stay updated with our latest news and offers through our social channels.
               </p>
               <div className="flex items-center mt-4 space-x-4"> {/* Align items horizontally */}
-                {socialMediaImages.map((imageSrc, index) => (
+                {socialMediaLinks.map((social, index) => (
                   <div className="min-h-[40px] w-[50px]" key={index}>
-                    <div className="flex justify-center items-center px-2 py-4 rounded border border-solid border-neutral-700 border-opacity-50">
-                      <Image
-                        loading="lazy"
-                        src={imageSrc}
-                        alt={`Social media icon ${index + 1}`}
-                        width={24} // Provide width
-                        height={24} // Provide height
-                        className="object-contain"
-                      />
-                    </div>
+                    <a href={social.url} target="_blank" rel="noopener noreferrer">
+                      <div className="flex justify-center items-center px-2 py-4 rounded border border-solid border-neutral-700 border-opacity-50">
+                        <Image
+                          loading="lazy"
+                          src={social.src}
+                          alt={`Social media icon ${index + 1}`}
+                          width={24} // Provide width
+                          height={24} // Provide height
+                          className="object-contain"
+                        />
+                      </div>
+                    </a>
                   </div>
                 ))}
               </div>
