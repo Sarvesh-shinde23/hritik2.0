@@ -1,38 +1,35 @@
 import React from "react";
-import Image from "next/image"; // Import Next.js Image
+import Image from "next/image";
 
 interface ServiceCardProps {
-  icon: string;
+  ImageSrc: string;
+  ImageAlt: string;
   title: string;
   description: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ ImageSrc, ImageAlt, title, description }) => {
   return (
-    <div className="flex flex-col flex-1 shrink justify-center pt-6 basis-0 max-w-[1320px] min-w-[240px]">
-      <div className="flex px-3 w-full min-h-[251px]">
-        <div className="flex flex-col px-8 py-12 bg-white min-w-[240px] shadow-[0px_0px_25px_rgba(0,0,0,0.1)] w-[314px] max-md:px-5">
-          {/* Icon Section */}
-          <div className="flex flex-col items-start pt-2 pb-2.5 w-full">
-            <div className="flex items-start w-9">
-              <Image
-                loading="lazy"
-                src={icon}
-                alt={`${title} icon`} // Add alt description for accessibility
-                width={36} // Set width for better optimization
-                height={36} // Set height for better optimization
-                className="object-contain w-9 aspect-square"
-              />
-            </div>
-          </div>
-          {/* Title */}
-          <h3 className="mt-2.5 w-full text-xl font-bold leading-tight text-neutral-800">
-            {title}
-          </h3>
-          {/* Description */}
-          <p className="pt-1.5 mt-2.5 w-full text-sm leading-6 text-neutral-700">
-            {description}
-          </p>
+    <div className="flex flex-col grow justify-center px-3 pt-6 min-h-[383px] max-md:max-w-full">
+      <div className="flex flex-col px-5 py-20 w-full bg-white border border-solid border-neutral-700 border-opacity-10 max-md:py-14 max-md:px-4 max-sm:py-10 max-sm:px-3">
+        {/* Icon Container */}
+        <div className="flex justify-center items-center self-center px-5 w-16 h-16 rounded bg-black min-h-[64px] max-sm:w-12 max-sm:h-12">
+          <Image
+            loading="lazy"
+            src={ImageSrc}
+            alt={ImageAlt}
+            width={28}
+            height={28}
+            className="object-contain w-7 aspect-square max-sm:w-5"
+          />
+        </div>
+        {/* Title */}
+        <div className="flex justify-center items-start mt-5 text-2xl font-bold leading-tight text-center text-black max-md:text-xl max-sm:text-lg">
+          <div className="flex-1 shrink px-28 w-full min-w-[240px] max-md:px-5 max-sm:px-2">{title}</div>
+        </div>
+        {/* Description */}
+        <div className="px-0.5 mt-3.5 text-sm leading-6 text-center text-neutral-700 max-md:text-base max-sm:text-sm">
+          {description}
         </div>
       </div>
     </div>

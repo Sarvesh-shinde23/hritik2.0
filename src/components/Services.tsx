@@ -39,7 +39,7 @@ const Services: React.FC = () => {
       <div className="flex flex-col w-full max-w-[1320px] max-md:max-w-full">
         <div className="flex flex-wrap justify-center w-full max-md:max-w-full">
           {servicesData.map((service, index) => (
-            <ServiceCard key={index} {...service} />
+            <ServiceCard ImageSrc={""} ImageAlt={""} key={index} {...service} />
           ))}
         </div>
       </div>
