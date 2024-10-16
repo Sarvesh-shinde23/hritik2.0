@@ -6,6 +6,7 @@ interface ServiceCardProps {
   ImageAlt: string;
   title: string;
   description: string;
+  className:string
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ ImageSrc, ImageAlt, title, description }) => {

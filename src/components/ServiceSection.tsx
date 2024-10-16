@@ -1,6 +1,3 @@
-
-
-
 import * as React from "react";
 import ServiceProp from "./ServiceProp";
 
@@ -25,7 +22,7 @@ const serviceData = [
   },
   {
     ImageSrc: "/services/10.svg",
-    ImageAlt: "Fundraising and Capital Acquisition",
+    ImageAlt: "Sales and Marketing Optimization",
     title: "Sales and Marketing Optimization",
     description: "We drive growth with effective sales and marketing strategies, including customer acquisition, sales funnel optimization, and branding.",
   },
@@ -57,61 +54,32 @@ const serviceData = [
 
 const ServiceSection: React.FC = () => {
   return (
-    <div  id="services" className="flex overflow-hidden flex-col items-center py-8 pr-24 pl-24 bg-white max-md:px-5">
-
-      <div className="flex flex-col  w-full font-bold text-center max-w-[1320px] max-md:max-w-full">
-        <div className="self-center px-5 py-2 text-sm tracking-wider leading-tight uppercase whitespace-nowrap bg-blue-600 bg-opacity-10 rounded-[50px] text-black">
+    <div id="services" className="flex overflow-hidden flex-col items-center py-8 px-6 bg-white">
+      {/* Section Title */}
+      <div className="flex flex-col w-full max-w-[1320px] text-center">
+        <div className="self-center px-5 py-2 text-sm tracking-wider leading-tight uppercase bg-blue-600 bg-opacity-10 rounded-full text-black">
           Services
         </div>
-        <div className="mt-2.5 w-full text-3xl pl-[484px] pr-[485px] text-black max-md:px-5 max-md:max-w-full">
+        <div className="mt-2.5 text-3xl font-bold text-black">
           Our <span className="text-black">Services</span>
         </div>
       </div>
-      <div className="flex flex-col max-w-full w-[1320px]">
-        <div className="flex flex-col w-full max-md:max-w-full">
-          <div className="max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col">
-              {serviceData.slice(0, 3).map((service, index) => (
-                <ServiceProp
-                  key={index}
-                  ImageSrc={service.ImageSrc}
-                  ImageAlt={service.ImageAlt}
-                  title={service.title}
-                  description={service.description}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-        <div className="max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col">
-            {serviceData.slice(3,6).map((service, index) => (
-              <ServiceProp
-                key={index}
-                ImageSrc={service.ImageSrc}
-                ImageAlt={service.ImageAlt}
-                title={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
+      {/* Service Cards */}
+      <div className="flex flex-col w-full max-w-[1320px] gap-8 mt-8">
+        <div className="flex flex-wrap justify-center gap-5">
+          {serviceData.map((service, index) => (
+            <ServiceProp
+              key={index}
+              ImageSrc={service.ImageSrc}
+              ImageAlt={service.ImageAlt}
+              title={service.title}
+              description={service.description}
+              className="max-w-[320px] w-full flex-1" // Adjust to be responsive
+            />
+          ))}
         </div>
       </div>
-      <div className="max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col">
-              {serviceData.slice(6).map((service, index) => (
-                <ServiceProp
-                  key={index}
-                  ImageSrc={service.ImageSrc}
-                  ImageAlt={service.ImageAlt}
-                  title={service.title}
-                  description={service.description}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-  
+    </div>
   );
 };
 
