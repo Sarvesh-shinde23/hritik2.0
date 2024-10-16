@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
                   Phone: <a href="tel:+155895548855" className="text-blue-600">+91 98921 02328</a>
                 </p>
                 <p className="mt-1.5 font-bold">
-                  Email: <a href="mailto:info@example.com" className="text-blue-600">hhinduja@gmail.com</a>
+                  Email: <a href="transcendconsultancy12@gmail.com" className="text-blue-600">transcendconsultancy12@gmail.com</a>
                 </p>
               </div>
             </div>

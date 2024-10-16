@@ -29,7 +29,7 @@ const ContactSection: React.FC = () => {
                 {
                   iconSrc: "email.svg",
                   title: "Email Us",
-                  description: "hhinduja@gmail.com"
+                  description: "transcendconsultancy12@gmail.com"
                 }
               ].map((item, index) => (
                 <div key={index} className="flex items-start mb-10">
